@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Stackexchange_Magento52274>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>1.0.0</version>
+    </Stackexchange_Magento52274>
+  </modules>
+</config>
+
