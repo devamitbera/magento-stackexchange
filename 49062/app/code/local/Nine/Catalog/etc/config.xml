@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Nine_Catalog>
+      <version>0.1.0</version>
+    </Nine_Catalog>
+  </modules>
+  <global>
+    <helpers>
+      <ninecatalog>
+        <class>Nine_Catalog_Helper</class>
+      </ninecatalog>
+    </helpers>
+	<models>
+	  <ninecatalog>
+		<class>Nine_Catalog_Model</class>
+	  </ninecatalog>
+	</models>
+    <events>
+	  <catalog_block_product_list_collection> <!-- identifier of the event we want to catch -->
+        <observers>
+          <catalog_block_product_list_collection_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>ninecatalog/observer</class> <!-- observers class alias -->
+            <method>filterBlankImage</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </catalog_block_product_list_collection_handler>
+        </observers>
+      </catalog_block_product_list_collection>
+    </events>
+  </global>
+</config> 
