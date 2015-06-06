@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Magento_Stackexchange70064>
+			<version>1.0.0</version>
+		</Magento_Stackexchange70064>
+	</modules>
+	<global>
+		<models>
+			<stackexchange70064>
+				<class>Magento_Stackexchange70064_Model</class>
+			</stackexchange70064>
+		</models>
+	</global>
+	<!-- 
+	 add handler
+	  -->
+	   <frontend>
+        <events>
+            <controller_action_layout_load_before>
+                <observers>
+                    <customer_group_wise_handler>
+                        <class>stackexchange70064/observer</class>
+                        <method>addCustomerLoadLayout</method>
+                    </customer_group_wise_handler>
+                </observers>
+            </controller_action_layout_load_before>
+       </events>
+ </frontend>
+ </config>

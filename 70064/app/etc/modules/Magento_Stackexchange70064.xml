@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Magento_Stackexchange70064>
+			<codePool>local</codePool>
+			<active>true</active>
+		</Magento_Stackexchange70064>
+	</modules>
+</config>
