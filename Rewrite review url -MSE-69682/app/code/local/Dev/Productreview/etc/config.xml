@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cofig>
+	<modules>
+		<Dev_Productreview>
+			<version>1.0.0</version>
+		</Dev_Productreview>
+	</modules>
+	<!--  define route -->
+	<frontend>
+		<routers>
+			<productview> <!--  router identifire -->
+				<use>standard</use>
+				<args>
+					<modules>
+						<module>Dev_Productreview</module>
+						<frontName>productreview</frontName>
+					</modules>
+				</args>
+			</productview>
+		</routers>
+	</frontend>
+	<!--  model declare  -->
+	<global>
+		<models>
+			<productreview>
+				<class>Dev_Productreview_Model</class>
+			</productreview>
+		</models>
+		<!-- event for add a router -->
+		<events>
+			<controller_front_init_routers>
+				<observers>	
+				<add_review_route>	<!-- observer identifier -->
+					<class>Dev_Productreview_Controller_Router</class>
+					<method>initControllerRouters</method>
+				</add_review_route>	
+				</observers>
+			</controller_front_init_routers>
+			<productreview_controller_router_match_before>
+				<observers>
+				<productreview_controller_router_match_before_a>
+					<class>productreview/observer</class>
+					<method>add</method>
+				</productreview_controller_router_match_before_a>
+				</observers>
+			</productreview_controller_router_match_before>
+		</events>
+	</global>
+</cofig>

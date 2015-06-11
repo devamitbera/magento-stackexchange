@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Dev_Productreview>
+			<codePool>local</codePool>
+			<active>true</active>
+				<depends>Mage_Review</depends>
+		</Dev_Productreview>
+	</modules>
+</config>
