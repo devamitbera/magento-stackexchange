@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Stackexchange_Magento84352>
+            <codePool>community</codePool>
+            <active>true</active>
+        </Stackexchange_Magento84352>
+    </modules>
+</config>
