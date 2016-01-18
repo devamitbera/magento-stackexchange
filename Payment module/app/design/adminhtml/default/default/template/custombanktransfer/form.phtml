@@ -1,0 +1,21 @@
+<?php $_code=$this->getMethodCode() ?>
+
+<?php
+if($this->CurrrentAvaliableBanks()->getSize()>0):?>
+<ul id="payment_form_<?php echo $_code ?>" style="display:none">
+
+ <?php $cbank_id = $this->getInfoData('cbank_id') ?>
+<?php
+$bankCollection=$this->CurrrentAvaliableBanks();
+	foreach($bankCollection as $bank):
+?>
+    <li>
+        <div class="input-box">
+      <input id="cb_bank_<?php echo $bank->getId(); ?>" value="<?php echo $bank->getId(); ?>" type="radio" name="payment[cbank_id]" title="<?php echo $this->escapeHtml($bank->getCbankName()) ?>" class="radio"  <?php if($cbank_id==$bank->getId()): ?> checked="checked"<?php endif; ?>/>
+       <label for="cb_bank_<?php echo $bank->getId(); ?>"><?php echo $this->escapeHtml($bank->getCbankName()) ?></label>
+         </div>
+    </li>
+   
+<?php endforeach; ?>
+</ul>
+<?php endif; ?>

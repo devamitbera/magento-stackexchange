@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@Author Amit Bera
+@Email dev.amitbera@gmail.com
+@ Website: www.amitbera.com
+*/-->
+<layout>
+    <adminhtml_custombanktransfer_index>
+        <reference name="content">
+           
+        </reference>
+    </adminhtml_custombanktransfer_index>
+</layout>

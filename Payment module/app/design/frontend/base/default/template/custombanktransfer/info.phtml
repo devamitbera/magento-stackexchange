@@ -1,0 +1,9 @@
+<p><?php echo $this->escapeHtml($this->getMethod()->getTitle()) ?></p>
+<?php if($this->haveBankDetails()):?>
+	  <p><strong><?php echo $this->__('Bank Name:') ?></strong> <?php echo $this->escapeHtml($this->getBankDetails()->getCbankName()) ?></p><br/>
+      
+ 	  <p><strong><?php echo $this->__('Bank Name:') ?></strong> <?php echo $this->escapeHtml($this->getBankDetails()->getCbankBranch()) ?></p><br/>
+      	  <p><strong><?php echo $this->__('Bank Name:') ?></strong> <?php echo $this->escapeHtml($this->getBankDetails()->getCbankAccount()) ?></p><br/>
+          	  <p><strong><?php echo $this->__('Bank Name:') ?></strong> <?php echo $this->escapeHtml($this->getBankDetails()->getCbankType()) ?></p><br/>
+      
+<?php endif;?>

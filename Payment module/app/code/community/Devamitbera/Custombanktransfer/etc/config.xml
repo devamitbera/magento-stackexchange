@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@Author Amit Bera
+@Email dev.amitbera@gmail.com
+@ Website: www.amitbera.com
+*/-->
+<config>
+	<modules>
+		<Devamitbera_Custombanktransfer>
+			<version>1.0.0</version>
+		</Devamitbera_Custombanktransfer>
+	</modules>
+	<!-- define  payment model block, models,helpes
+	-->
+	<global>
+		<blocks>
+			<custombanktransfer>
+				<class>Devamitbera_Custombanktransfer_Block</class>
+			</custombanktransfer>
+		</blocks>
+		<helpers>
+			<custombanktransfer>
+				<class>Devamitbera_Custombanktransfer_Helper</class>
+			</custombanktransfer>
+		</helpers>
+		<models>
+			<custombanktransfer>
+				<class>Devamitbera_Custombanktransfer_Model</class>
+				<resourceModel>custombanktransfer_resource</resourceModel>
+			</custombanktransfer>
+			<custombanktransfer_resource>
+				<class>Devamitbera_Custombanktransfer_Model_Resource</class>
+				<entities>
+					<custombanktransfer>
+						<table>custombanktransfer_amit</table>
+					</custombanktransfer>
+				</entities>
+			</custombanktransfer_resource>
+		</models>
+		<resources>
+			<custombanktransfer_setup>
+				  <setup>
+				  	<module>Devamitbera_Custombanktransfer</module>
+				  </setup>
+				  <connection>
+				  	<use>core_setup</use>
+				  </connection>
+			</custombanktransfer_setup>
+			<custombanktransfer_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</custombanktransfer_read>
+			<custombanktransfer_write>
+				<connection>
+					<use>core_rwrite</use>
+				</connection>
+			</custombanktransfer_write>
+		</resources>
+		<!-- copy fields -->
+		<fieldsets>
+             <sales_convert_quote_payment>
+                <cbank_id>
+                    <to_order_payment>*</to_order_payment>
+                </cbank_id>
+                <cbank_name>
+                    <to_order_payment>*</to_order_payment>
+                </cbank_name>
+                <cbank_branch>
+                    <to_order_payment>*</to_order_payment>
+                </cbank_branch>
+                <cbank_account>
+                    <to_order_payment>*</to_order_payment>
+                </cbank_account>
+                <cbank_type>
+                    <to_order_payment>*</to_order_payment>
+                </cbank_type>
+             </sales_convert_quote_payment>
+			 <sales_convert_order_payment>
+				<cbank_id>
+					<to_quote_payment>*</to_quote_payment>
+				</cbank_id>
+				<cbank_name>
+					<to_quote_payment>*</to_quote_payment>
+				</cbank_name>
+				<cbank_branch>
+					<to_quote_payment>*</to_quote_payment>
+				</cbank_branch>
+				<cbank_account>
+					<to_quote_payment>*</to_quote_payment>
+				</cbank_account>
+				<cbank_type>
+					<to_quote_payment>*</to_quote_payment>
+				</cbank_type>
+			 </sales_convert_order_payment>
+			 
+        </fieldsets>
+	</global>
+	<!-- declartin payment method -->
+	<default>
+		<payment>
+			<custombanktransfer>
+				<active>0</active>
+				  <model>custombanktransfer/method_custombanktransfer</model>
+					<allowspecific>0</allowspecific>
+					<group>offline</group>
+			</custombanktransfer>
+		</payment>	
+	</default>
+        <!-- define Admin  section -->
+        <admin>
+            <routers>
+                <adminhtml>
+                    <args>
+                        <modules>
+                            <custombanktransfer after="Mage_Adminhtml">Devamitbera_Custombanktransfer_Adminhtml</custombanktransfer>
+                        </modules>
+                    </args>
+                </adminhtml> 
+            </routers>   
+        </admin>
+        <!-- define a layout file -->
+        <adminhtml>
+            <layout>
+                <updates>
+                    <custombanktransfer>
+                        <file>custombanktransfer.xml</file>
+                    </custombanktransfer>
+                </updates>
+            </layout>
+        </adminhtml>
+        
+</config>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@Author Amit Bera
+@Email dev.amitbera@gmail.com
+@ Website: www.amitbera.com
+-->
+<config>
+	<modules>
+	<Devamitbera_Custombanktransfer>
+		<codePool>community</codePool>
+		<active>true</active>
+	</Devamitbera_Custombanktransfer>
+	</modules>
+</config>

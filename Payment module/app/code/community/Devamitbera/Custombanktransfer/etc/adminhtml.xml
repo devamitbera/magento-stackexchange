@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@Author Amit Bera
+@Email dev.amitbera@gmail.com
+@ Website: www.amitbera.com
+*/-->
+<config>
+    <menu>
+        <custombanktransfer module="custombanktransfer" translate="title">
+            <title>Bank Transfer</title>
+            <sort_order>89</sort_order>
+            <children>
+                <list  module="custombanktransfer" translate="title">
+                    <title>Manage Banks</title>
+                     <sort_order>2</sort_order>
+                    <action>adminhtml/custombanktransfer/index</action>
+                </list>
+            </children>
+        </custombanktransfer>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <custombanktransfer module="custombanktransfer" translate="title">
+                        <title>Bank Transfer</title>
+                        <sort_order>5</sort_order>
+                        <children>
+                             <list  module="custombanktransfer" translate="title">
+                                 <title>Manage Banks</title>
+                                  <sort_order>2</sort_order>
+                             </list>
+                         </children>                        
+                    </custombanktransfer>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
