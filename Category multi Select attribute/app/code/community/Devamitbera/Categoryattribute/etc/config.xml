@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@Author Amit Bera
+@Email dev.amitbera@gmail.com
+@ Website: www.amitbera.com
+*/-->
+<config>
+	<modules>
+		<Devamitbera_Categoryattribute>
+			<version>1.0.0</version>
+		</Devamitbera_Categoryattribute>
+	</modules>
+	<!-- define  resource model
+	-->
+	<global>
+		<models>
+			<categoryattribute>
+				<class>Devamitbera_Categoryattribute_Model</class>
+			</categoryattribute>
+		</models>
+		<resources>
+			<categoryattribute_setup>
+				  <setup>
+				  	<module>Devamitbera_Categoryattribute</module>
+					<class>Mage_Catalog_Model_Resource_Setup</class>
+				  </setup>
+				  <connection>
+				  	<use>core_setup</use>
+				  </connection>
+			</categoryattribute_setup>
+			<categoryattribute_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</categoryattribute_read>
+			<categoryattribute_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</categoryattribute_write>
+		</resources>
+	</global>
+</config>
