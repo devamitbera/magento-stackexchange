@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+@Author Amit Bera
+@Email dev.amitbera@gmail.com
+@ Website: www.amitbera.com
+*/-->
+<layout version="0.1.0">
+<!--
+Default layout, loads most of the pages
+-->
+<default>
+<reference name="head">
+	<block type="core/template" name="addgoogle.code" template="searchbylocation/googlejs.phtml" />
+</reference>
+	<reference name="top.search">
+		 <action method="setTemplate"><template>searchbylocation/form.mini.phtml</template></action>
+		 <block type="core/template" name="localsearch" template="searchbylocation/localsearch.phtml" />
+	</reference>
+</default>
+</layout>

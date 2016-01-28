@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@Author Amit Bera
+@Email dev.amitbera@gmail.com
+@ Website: www.amitbera.com
+*/-->
+<config>
+	<modules>
+		<Devamitbera_Searchbylocation>
+			<version>1.0.0</version>
+		</Devamitbera_Searchbylocation>
+	</modules>
+	<!-- define  payment model block, models,helpes
+	-->
+	<global>
+		<blocks>
+			<searchbylocation>
+				<class>Devamitbera_Searchbylocation_Block</class>
+			</searchbylocation>
+		</blocks>
+		<helpers>
+			<searchbylocation>
+				<class>Devamitbera_Searchbylocation_Helper</class>
+			</searchbylocation>
+		</helpers>
+		<models>
+			<searchbylocation>
+				<class>Devamitbera_Searchbylocation_Model</class>
+			</searchbylocation>
+			<catalogsearch>
+				<rewrite>
+					<layer>Devamitbera_Searchbylocation_Model_Layer</layer>
+				</rewrite>
+			</catalogsearch>
+		</models>
+	</global>
+        <!-- define a layout file -->
+        <frontend>
+			<routers>
+				<searchbylocation>
+					<use>standard</use>
+					<args>
+						<module>Devamitbera_Searchbylocation</module>
+						<frontName>searchbylocation</frontName>
+					</args>
+				</searchbylocation>
+			</routers>
+            <layout>
+                <updates>
+                    <searchbylocation>
+                        <file>searchbylocation.xml</file>
+                    </searchbylocation>
+                </updates>
+            </layout>
+        </frontend>
+        
+</config>
