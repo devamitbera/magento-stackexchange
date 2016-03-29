@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@Author Amit Bera
+@Email dev.amitbera@gmail.com
+@ Website: www.amitbera.com
+-->
+<config>
+	<modules>
+	<Devamitbera_Searchbylocation>
+		<codePool>community</codePool>
+		<active>true</active>
+		<depends>
+			<Mage_CatalogSearch/>
+		</depends>
+	</Devamitbera_Searchbylocation>
+	</modules>
+</config>
